@@ -1,0 +1,72 @@
+h1 {
+    color: gray;
+    font-size: 50px;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+/* START BELOW THIS LINE */
+
+/* 1. Change body background to navy blue when viewport width is less than 800px */
+
+@media (max-width: 800px) {
+    body {
+        background-color: navy;
+    }
+}
+    /* 2. Change body background to orange when viewport width is less than 600px */
+
+    @media (max-width: 600px) {
+        body {
+            background-color: orange;
+        }
+    }
+
+        /* 3. Make a dashed gray border on "One" and  "Three" dotted gray border*/
+
+        @media (min-width: 600px) and (max-height: 400px) { 
+                    
+                #one {
+                        border: 10px dashed gray;
+
+                    }
+
+                 #three {
+                        border: 10px dotted gray;
+                    }
+               }
+
+        /* 4. Give "Two" a solid gray border 10px when vw > 900px or vh > 500px  */
+    
+        @media (min-width: 900px) or (max-height: 500px) {
+
+                #two {
+                    border: 10px solid gray;
+                }
+        }
+
+        /* 5. In landscape mode have h1 elements display in a row */
+
+        @media (orientation: landscape){
+
+            body{
+                display: flex;
+            }
+        }
+
+        /* 6. In portrait mode h1 elements in column in center */
+
+        @media (orientation: portrait) {
+
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Bonus 1 */
+        
