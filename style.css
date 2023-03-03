@@ -15,13 +15,21 @@ body {
 @media (max-width: 800px) {
     body {
         background-color: navy;
+       
+    }
+    #two {
+        text-decoration-color: navy;
     }
 }
-    /* 2. Change body background to orange when viewport width is less than 600px */
+
+/* 2. Change body background to orange when viewport width is less than 600px */
 
     @media (max-width: 600px) {
         body {
             background-color: orange;
+        }
+        #two {
+            text-decoration-color: orange;
         }
     }
 
@@ -68,5 +76,25 @@ body {
             }
         }
 
-        /* Bonus 1 */
+        /* Bonus 1 changt text to uppercase and green if user attempts to print*/
+
+        @media print {
+            h1{
+            text-transform: uppercase;
+            text-decoration-color: green;
+            }
+        }
+
+        /* Bonus 2 have "Two" match background color. Above in background statements */
+
+        /* Bonus 3 italcize between vw 750 to 775 and vh 550 to 575 */
         
+        @media (min-width: 750px) and (max-width: 775px) and (min-height: 550) and (max-height: 575){
+            body{
+                font-style: italic;
+            }
+        }
+        
+
+
+
