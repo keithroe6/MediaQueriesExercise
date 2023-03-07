@@ -18,7 +18,7 @@ body {
        
     }
     #two {
-        text-decoration-color: navy;
+        color: navy;
     }
 }
 
@@ -29,7 +29,7 @@ body {
             background-color: orange;
         }
         #two {
-            text-decoration-color: orange;
+            color: orange;
         }
     }
 
@@ -47,12 +47,19 @@ body {
                     }
                }
 
+               /* #two {
+                    border: 10px solid;
+                    border-image-source: linear-gradient(90deg, red, blue);
+                    border-image-slice: 1 fill; */
+
+
+
         /* 4. Give "Two" a solid gray border 10px when vw > 900px or vh > 500px  */
     
         @media (min-width: 900px) or (max-height: 500px) {
 
                 #two {
-                    border: 10px solid gray;
+                    border-top: 10px solid gray;
                 }
         }
 
@@ -65,6 +72,8 @@ body {
             }
         }
 
+      
+
         /* 6. In portrait mode h1 elements in column in center */
 
         @media (orientation: portrait) {
@@ -73,15 +82,19 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
             }
         }
 
         /* Bonus 1 changt text to uppercase and green if user attempts to print*/
 
         @media print {
-            h1{
+            body{
             text-transform: uppercase;
-            text-decoration-color: green;
+            
+            }
+            h1{
+                color:green;
             }
         }
 
@@ -90,7 +103,7 @@ body {
         /* Bonus 3 italcize between vw 750 to 775 and vh 550 to 575 */
         
         @media (min-width: 750px) and (max-width: 775px) and (min-height: 550) and (max-height: 575){
-            body{
+            h1 {
                 font-style: italic;
             }
         }
